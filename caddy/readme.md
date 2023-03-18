@@ -21,7 +21,7 @@ nano /etc/caddy/Caddyfile
         order rate_limit before basicauth
 }
 
-services.tecnodes.network {
+domain.com {
         log
         root * /var/www/html
         file_server
