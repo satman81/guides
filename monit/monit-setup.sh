@@ -1,4 +1,7 @@
 #!/bin/bash
+sudo apt-get install libwww-perl libdbi-perl libdbd-sqlite3-perl libdatetime-perl
+sudo cpan DateTime::Format::ISO8601
+
 if ! which sqlite3; then sudo apt install sqlite3; fi
 
 # init sqlite db
