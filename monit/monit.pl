@@ -7,7 +7,7 @@ use DBI;
 use DateTime::Format::ISO8601; 
 
 # Configuration
-my $DB_FILE = "quicksilver.db";
+my $DB_FILE = "/path/to/quicksilver.db";
 my $TELEGRAM_BOT_TOKEN = "5640099363:AAHYeYDur-xLjGonNSz1BZAzlwU7iJMErsw";
 my $TELEGRAM_CHAT_ID = "17869361";
 my $RPC_ENDPOINT = "http://localhost:36657"; # Replace with your RPC endpoint
