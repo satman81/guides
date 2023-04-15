@@ -9,3 +9,8 @@ if [ ! -f quicksilver.db ]; then
   echo "CREATE TABLE blockheight (height INTEGER, block_time TEXT);" | sqlite3 quicksilver.db
   echo "INSERT INTO blockheight VALUES (0, '');" | sqlite3 quicksilver.db
 fi
+
+# setup cronjob
+#* * * * * /usr/bin/perl /path/to/quicksilver/script/monit.pl 2>&1 | logger -t monit.pl
+#check logs using
+#sudo tail -f /var/log/syslog | grep monit
