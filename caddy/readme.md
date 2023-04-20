@@ -36,6 +36,10 @@ domain.com {
 }
 
 ```
+# Basic Auth
+https://cyberhost.uk/basic-auth-caddy/<br>
+https://caddyserver.com/docs/caddyfile/directives/basicauth
+
 # Troubleshoot
 
 if 
