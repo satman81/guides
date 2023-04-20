@@ -36,3 +36,14 @@ domain.com {
 }
 
 ```
+# Troubleshoot
+
+if 
+sudo caddy fmt /etc/caddy/Caddyfile
+
+> Error: Caddyfile:11: Caddyfile input is not formatted (or similar)
+
+then:
+```
+sudo caddy fmt --overwrite --diff /etc/caddy/Caddyfile
+```
