@@ -1,6 +1,7 @@
 # Installation
 ```
-sudo apt-get install tmux
+sudo apt update
+sudo apt-get install tmux -y
 mkdir ~/tmux
 git clone https://github.com/tmux-plugins/tmux-resurrect ~/tmux
 
