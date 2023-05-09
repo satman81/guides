@@ -15,7 +15,7 @@ bind-key \` last-window
 #resurrect restore window
 run-shell ~/tmux/resurrect.tmux" | tee ~/.tmux.conf
 
-tmux source-file ~/.tmux.conf![image](https://user-images.githubusercontent.com/101592073/236673065-e04f9cef-a34b-43c9-bee8-43b529ff35bf.png)
+tmux source-file ~/.tmux.conf
 ```
 
 
