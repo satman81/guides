@@ -9,6 +9,13 @@ sudo apt install caddy
 
 # custom caddy with rate limit support
 # https://caddyserver.com/docs/build#package-support-files-for-custom-builds-for-debianubunturaspbian
+#Install GO
+
+mkdir ~/caddy && cd ~/caddy
+wget https://github.com/caddyserver/xcaddy/releases/download/v0.3.2/xcaddy_0.3.2_linux_amd64.tar.gz
+tar xvf xcaddy_0.3.2_linux_amd64.tar.gz
+./xcaddy build --with github.com/mholt/caddy-ratelimit
+# a caddy binary will be created in current dir
 
 sudo dpkg-divert --divert /usr/bin/caddy.default --rename /usr/bin/caddy
 sudo mv ./caddy /usr/bin/caddy.custom
