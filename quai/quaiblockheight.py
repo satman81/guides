@@ -64,7 +64,7 @@ if __name__ == "__main__":
             height = data["height"]
             if name in previous_data["block_heights"]:
                 block_difference = height - previous_data["block_heights"][name]["height"]
-                print(f"{name} ({port})         block count increased by {block_difference}     - Current Block ({height})")
+                print(f"{name} ({port}) block count increased by {block_difference}     - Current Block ({height})")
             else:
                 print(f"{name} ({port}) data not available in previous run.")
     else:
