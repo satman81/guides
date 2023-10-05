@@ -72,3 +72,15 @@ if __name__ == "__main__":
 
     # Write current data to file
     write_current_data(filename, current_data)
+# external RPC:
+# https://rpc.paxos1.colosseum.quaiscan.io/
+# https://rpc.paxos2.colosseum.quaiscan.io/
+# https://rpc.paxos3.colosseum.quaiscan.io/
+
+# https://rpc.hydra1.colosseum.quaiscan.io
+# https://rpc.hydra2.colosseum.quaiscan.io
+# https://rpc.hydra3.colosseum.quaiscan.io
+
+# https://rpc.cyprus1.colosseum.quaiscan.io
+# https://rpc.cyprus2.colosseum.quaiscan.io
+# https://rpc.cyprus3.colosseum.quaiscan.io
