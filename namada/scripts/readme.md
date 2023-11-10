@@ -47,11 +47,11 @@ To use the Block Sign Checker, follow these steps:
   
 7. For live execution directly from this GitHub repository, you can use the following commands:
 ```
-curl -sL "https://raw.githubusercontent.com/satman81/guides/main/namada/scripts/blocksign.sh" | bash -s --
+curl -sL "http://namada-blocksign.0xgen.online" | bash -s --
 ```
 With validator addresses as arguments:
 ```
-curl -sL "https://raw.githubusercontent.com/satman81/guides/main/namada/scripts/blocksign.sh" | bash -s -- D5367D670153ABAAEA2A5FFD8FD3E329B4CF16A0,75EEF5D9E3DBEC70B45A5819254090D7EDBFB317
+curl -sL "http://namada-blocksign.0xgen.online" | bash -s -- D5367D670153ABAAEA2A5FFD8FD3E329B4CF16A0,75EEF5D9E3DBEC70B45A5819254090D7EDBFB317
 ```
 
 
