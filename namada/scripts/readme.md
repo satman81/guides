@@ -1,6 +1,6 @@
-# Namada Block Signatures Checker
+# Namada Block Sign Checker
 
-The Block Signatures Checker is a Bash script that allows you to analyze block signatures of validators in a specified range of block heights of namada's current testnet. It provides information on how many blocks each validator has signed and how many they have missed within the given range.
+The Namada Block Sign Checker is a Bash script designed for analyzing block signatures of validators in the `Namada testnet`. This script allows you to evaluate how many blocks each validator has signed and how many they have missed within a specified range of block heights.
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ The Block Signatures Checker is a Bash script that allows you to analyze block s
 
 ## Usage
 
-To use the Block Signatures Checker, follow these steps:
+To use the Block Sign Checker, follow these steps:
 
 1. Clone the repository or download the script to your local machine.
 
@@ -26,27 +26,32 @@ To use the Block Signatures Checker, follow these steps:
   blocks_to_scan=50
   ````
 
-4. if you are running the script on the same machine where your namada node is running then you can simply execute it without any parameter, by default script will fetch the latest block and will scan last 50 blocks to find your block signature
+4. If you are running the script on the same machine where your Namada node is located, you can execute it without any parameters. By default, the script will fetch the latest block and scan the last 50 blocks to find block signatures:
 
   ```bash
   ./blocksign.sh
   ```
 
-5. alternatively you can pass single or multiple comma-separated validator addresses
+5. Alternatively, you can pass one or more comma-separated validator addresses as arguments:
   ```
   ./blocksign.sh D5367D670153ABAAEA2A5FFD8FD3E329B4CF16A0,75EEF5D9E3DBEC70B45A5819254090D7EDBFB317
   ```
 6. sample output
 
-  ```
+  ```bash
   Scanning Blocks... [50/50]
   Validator Address: D5367D670153ABAAEA2A5FFD8FD3E329B4CF16A0 - Signed: 0, Missed: 50, Ratio: 0%
   Validator Address: 75EEF5D9E3DBEC70B45A5819254090D7EDBFB317 - Signed: 50, Missed: 0, Ratio: 100%
   Start Block: 123906 | End Block: 123956
   ```
-8. quick exeuction
-  ```
-  wget url.com
-  ``` 
+  
+7. For live execution directly from this GitHub repository, you can use the following commands:
+```
+curl -sL "https://raw.githubusercontent.com/satman81/guides/main/namada/scripts/blocksign.sh" | bash -s --
+```
+With validator addresses as arguments:
+```
+curl -sL "https://raw.githubusercontent.com/satman81/guides/main/namada/scripts/blocksign.sh" | bash -s -- D5367D670153ABAAEA2A5FFD8FD3E329B4CF16A0,75EEF5D9E3DBEC70B45A5819254090D7EDBFB317
+```
 
 
