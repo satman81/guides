@@ -1,3 +1,5 @@
+## How to find userid in Discord
+
 To find a user's Discord ID, you need to have Developer Mode enabled in Discord. Here's how you can enable Developer Mode and find a user's ID:
 
 Enable Developer Mode:
