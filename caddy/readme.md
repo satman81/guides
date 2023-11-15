@@ -40,6 +40,22 @@ domain.com {
 https://cyberhost.uk/basic-auth-caddy/<br>
 https://caddyserver.com/docs/caddyfile/directives/basicauth
 
+# Bind address
+
+```
+a.example.com {
+	bind 192.168.33.11
+
+	reverse_proxy somewhere:8080
+}
+
+b.example.com {
+	bind 192.168.33.33
+
+	reverse_proxy elsewhere:8080
+}
+```
+
 # Troubleshoot
 
 if 
