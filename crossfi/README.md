@@ -3,4 +3,4 @@ create the script where your node is installed -> https://github.com/satman81/gu
 ```
 echo "source path/to/autocomplete.sh" >> ~/.bashrc
 ```
-then create a new SSH session, and type crossfid <and press tab> commands will be auto-completed.
+then create a new SSH session, and type `crossfid & press tab` commands will be auto-completed.
