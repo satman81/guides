@@ -1,3 +1,5 @@
+# by SATMan - https://github.com/satman81/                                        
+# v0.1 - 02.2024
 _generate_crossfid_completions() {
     local cur prev opts cmds
     cur="${COMP_WORDS[COMP_CWORD]}"
