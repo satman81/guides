@@ -50,13 +50,13 @@ def check_block_production(rpc_url):
         return False
 
 def restart_service(service_name):
-    subprocess.run(["systemctl", "restart", service_name])
+    subprocess.run(["sudo","systemctl", "restart", service_name])
     print(f"Block were not processing, restarting service: {service_name}")  
 
 def unjail_node(node_binary, wallet_name, wallet_password):
 
-    send_discord_notification(discord_webhook_url,"Pathrock Monitoring: Blockx Mainnet Jailed detected, attempting to unjail..")
-    command = "echo '{}' | blockxd tx slashing unjail --from {} -y".format(wallet_password, wallet_name)
+    send_discord_notification(discord_webhook_url,"Monitoring: Gaiad Mainnet Jailed detected, attempting to unjail..")
+    command = "echo '{}' | {} tx slashing unjail --from {} -y".format(wallet_password, wallet_name, node_binary)
 
     #print(f"command: {command}")
 
@@ -94,7 +94,7 @@ def main():
             print("Checking block production...")  
             if not blocks_producing:
                 restart_service(systemd_service)
-                send_discord_notification(discord_webhook_url,"Pathrock Monitoring: Blockx Mainnet Node not producing blocks, service restart attempted.")
+                send_discord_notification(discord_webhook_url,"Monitoring: Blockx Mainnet Node not producing blocks, service restart attempted.")
 
             if blocks_producing and is_validator:
                 voting_power = check_voting_power(rpc_url, wallet_name)       
@@ -102,12 +102,12 @@ def main():
                 needs_unjail = voting_power == 0
                 if needs_unjail:                    
                     unjail_node(node_binary, wallet_name, wallet_password)
-                    send_discord_notification(discord_webhook_url, "Pathrock Monitoring: Blockx Mainnet unjailed executed, please verify...")
+                    send_discord_notification(discord_webhook_url, "Monitoring: Blockx Mainnet unjailed executed, please verify...")
 
         except Exception as e:
             send_discord_notification(discord_webhook_url, f"Error: {e}")
 
-        print("Sleeping 30 mins...")
+        print("Sleeping 10 mins...")
         print("------------------------------------------------------------------")
         time.sleep(600)
 
