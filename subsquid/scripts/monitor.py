@@ -1,4 +1,5 @@
 # subsquid worker monitoring from SATMan @ 0xgen - v0.0.1
+# pip3 install requests
 import requests
 import datetime
 import time
