@@ -34,7 +34,22 @@ domain.com {
                 }
         }
 }
+```
 
+# rate limit 2
+
+```
+rpc.domain.com {
+    reverse_proxy localhost:36xx
+    rate_limit {
+        zone rpc_limit {
+            #key {remote_host}
+            events 1000
+            window 300s
+            burst 100
+        }
+    }
+}
 ```
 # Basic Auth
 https://cyberhost.uk/basic-auth-caddy/<br>
