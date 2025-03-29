@@ -11,6 +11,9 @@ sudo systemctl reload caddy
 sudo service caddy restart
 sudo journalctl -xe -u caddy -f -o cat | ccze -A
 
+# Verify the config:
+caddy validate
+
 ```
 
 # rate limit version
